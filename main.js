@@ -63,7 +63,7 @@ function play(){
         return true;
     }
 
-    // creo una funzione che aggiunge una classe 
+    // creo una funzione che aggiunge una classe al click
     function toggleClick(){
         this.classList.add('clicked');
         this.removeEventListener('click',toggleClick);
@@ -74,7 +74,7 @@ function play(){
             terminaGioco();
         }else{
             tentativi.push(cell);
-            console.log(tentativi)
+            console.log(tentativi);
         }
 
     }   
@@ -86,14 +86,15 @@ function play(){
         for(let i=0; i<square.length; i++){
             if(bomb.includes(parseInt(square[i].innerText))){
                 square[i].classList.add('bomb');
+                // proposta per stoppare i click dopo aver cliccato sulla bomba
                 this.removeEventListener('click',terminaGioco);
             }
-            
+
         }
 
         for(let j=0; j<= tentativi.length; j++){
             console.log("tentativi eseguiti: " + tentativi.length);
-           break;
+            break;
           }
     }
 
