@@ -82,14 +82,21 @@ function play(){
     // creo una funzione che determina la fine del gioco
     function terminaGioco(){
         const square = document.getElementsByClassName('square');
+        let endGame = false;
 
         for(let i=0; i<square.length; i++){
             if(bomb.includes(parseInt(square[i].innerText))){
                 square[i].classList.add('bomb');
                 // proposta per stoppare i click dopo aver cliccato sulla bomba
-                this.removeEventListener('click',terminaGioco);
+                endGame = true;
+                console.log('ciao');
             }
+        }
 
+        if(endGame){
+            for(let j=0; square.length; j++){
+                this.removeEventListener('click',toggleClick);
+            }
         }
 
         for(let j=0; j<= tentativi.length; j++){
