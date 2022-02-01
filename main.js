@@ -2,7 +2,6 @@
 //  inizializzo variabili
 document.getElementById('start').addEventListener('click',play);
 
-
 // creo la funzione che gestisce il gioco
 function play(){
 
@@ -89,17 +88,19 @@ function play(){
                 square[i].classList.add('bomb');
                 // proposta per stoppare i click dopo aver cliccato sulla bomba
                 endGame = true;
-                console.log('ciao');
             }
         }
 
+        
         if(endGame){
-            for(let j=0; square.length; j++){
-                this.removeEventListener('click',toggleClick);
+            for(let j=0; j<=square.length; j++){
+                // let square = squares[j - 1];
+                square.removeEventListener('click',toggleClick);
+                // console.log("square: " + square.length)
             }
         }
 
-        for(let j=0; j<= tentativi.length; j++){
+        for(let j=0; j<=tentativi.length; j++){
             console.log("tentativi eseguiti: " + tentativi.length);
             break;
           }
