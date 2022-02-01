@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #011627;
+    font-family: sans-serif;
+    background-image: url('img/Rect\ Light.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.menu{
+    height: 60px;
+    background-image: url('img/Polygon\ Luminary\ \(1\).svg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.container-menu{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.selector-difficolta{
+    width: 160px;
+}
+
+.play{
+    padding: 2px 15px;
+    border-radius: 3px;
+}
+
+.container{
+    width: 500px;
+    margin: 50px auto;
+}
+
+#grid{
+    height: 500px;
+}
+
+#grid::after{
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.select{
+    width: 150px;
+}
+
+.square{
+    border: 1px solid red;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.clicked{
+    background-color: aquamarine;
+    color: #000;
+}
+
+.bomb{
+    background-image: url('img/bomb.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: transparent;
+}
+
