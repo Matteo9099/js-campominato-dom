@@ -1,11 +1,20 @@
 //  inizializzo variabili
 let text = document.getElementById('text').innerHTML = "Benvenuto! seleziona una difficolta e premi play.";
+
+// inserisco una immagine tramite JS
+let img = document.createElement("img");
+img.src = "img/generale_ccexpress (1).png";
+let src = document.getElementById('image');
+src.appendChild(img);
+
+
 document.getElementById('start').addEventListener('click',play);
 
 // creo la funzione che gestisce il gioco
 function play(){
 
     document.getElementById('text').innerHTML="";
+    document.getElementById('image').innerHTML="";
 
     const NUMERO_BOMBE = 16;
 
