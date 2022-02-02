@@ -1,9 +1,11 @@
-
 //  inizializzo variabili
+let text = document.getElementById('text').innerHTML = "Benvenuto! seleziona una difficolta e premi play.";
 document.getElementById('start').addEventListener('click',play);
 
 // creo la funzione che gestisce il gioco
 function play(){
+
+    document.getElementById('text').innerHTML="";
 
     const NUMERO_BOMBE = 16;
 
@@ -96,8 +98,10 @@ function play(){
 
   
         for(let j=0; j<=tentativi.length; j++){
-            console.log("tentativi eseguiti: " + tentativi.length);
-            break;
+           document.getElementById('prese').innerHTML = "caselle azzeccate: " + tentativi.length;
+           document.getElementById('rimaste').innerHTML = "caselle rimaste: " + (numeroCelle-tentativi.length-NUMERO_BOMBE);
+           break;
+            
           }
 
       
