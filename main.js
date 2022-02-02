@@ -80,8 +80,8 @@ function play(){
 
     // creo una funzione che determina la fine del gioco
     function terminaGioco(){
-        const square = document.getElementsByClassName('square');
-        let endGame = false;
+        const square = document.querySelectorAll('.square');
+        
 
         for(let i=0; i<square.length; i++){
             if(bomb.includes(parseInt(square[i].innerText))){
@@ -89,21 +89,18 @@ function play(){
                 // proposta per stoppare i click dopo aver cliccato sulla bomba
                 endGame = true;
             }
+
+            square[i].removeEventListener('click', toggleClick);
+
         }
 
-        
-        if(endGame){
-            for(let j=0; j<=square.length; j++){
-                // let square = squares[j - 1];
-                square.removeEventListener('click',toggleClick);
-                // console.log("square: " + square.length)
-            }
-        }
-
+  
         for(let j=0; j<=tentativi.length; j++){
             console.log("tentativi eseguiti: " + tentativi.length);
             break;
           }
+
+      
     }
 
 
